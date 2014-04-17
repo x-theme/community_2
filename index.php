@@ -56,13 +56,15 @@
 				</td>
 			<?}?>
 			</tr>
-		</table>
-		<? if ( g::forum_exist($forum_1 = x::board_id ( $domain ).'_1' ) ) { ?>
+		</table>		
 			<div class='latest_4'>
-				<? 
-				
-					$option = array('bo_table' => $forum_1);
-					include x::dir().'/theme/community_2/bottom_latest.php';
+				<? 				
+					include widget(
+						array(
+							'code'		=> 'x-community-2-bottom-latest',
+							'name'		=> 'x-community-2-bottom-latest',
+							'git'		=> 'https://github.com/x-widget/x-community-2-bottom-latest',
+						)
+					);
 				?>
-			</div>
-		<? }?>
+			</div>		
