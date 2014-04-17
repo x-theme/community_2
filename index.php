@@ -15,23 +15,19 @@
 		</table>
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
+			<?for( $latest_count = 1; $latest_count <= 3; $latest_count ++ ){?>
+				<td width='33%' class='latest_<?=$latest_count?>'>
 				<?
-					$cache_time = 1;
-					$option = array(
-					'icon' => x::url_theme().'/img/icon1.gif'
+					include widget(
+						array(
+							'code'		=> 'x-latest-community-2-'.$latest_count,
+							'name'		=> 'x-latest-community-2',
+							'git'		=> 'https://github.com/x-widget/x-latest-community-2',
+						)
 					);
-				
-				?><td width='33%' class='latest_1'><?=latest('x-latest-community-2', bo_table(1), 6, 20, $cache_time, $option )?></td>
-				<?
-					$option = array(
-					'icon' => x::url_theme().'/img/icon2.gif'
-					);
-				?><td width='34%' class='latest_2'><?=latest('x-latest-community-2', bo_table(2), 6, 20, $cache_time, $option)?></td> 
-				<?
-					$option = array(
-					'icon' => x::url_theme()."/img/icon3.gif",
-					);				
-				?><td width='33%' class='latest_3'><?=latest('x-latest-community-2', bo_table(3), 6, 20, $cache_time, $option)?></td> 
+				?>
+				</td>
+			<?}?>
 			</tr>
 		</table>
 		<div class='bottom-banner'>
@@ -46,24 +42,19 @@
 		
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<?php
-					$option = array(
-					'no' => 4,
-					'icon' => x::url_theme()."/img/icon4.gif",
-					);					
-				?><td width='33%' class='latest_1'><?=latest('x-latest-community-2', bo_table(4), 6, 20, $cache_time, $option )?></td>
-				<? 
-					$option = array(
-					'no' => 5,
-					'icon' => x::url_theme()."/img/icon5.gif",
-					);		
-				?><td width='34%' class='latest_2'><?=latest('x-latest-community-2',bo_table(5), 6, 20, $cache_time, $option )?></td>
+				<?for( $latest_count = 4; $latest_count <= 6; $latest_count ++ ){?>
+				<td width='33%' class='latest_<?=$latest_count?>'>
 				<?
-					$option = array(
-					'no' => 6,
-					'icon' => x::url_theme()."/img/icon6.gif",
-					);						
-				?><td width='33%' class='latest_3'><?=latest('x-latest-community-2',bo_table(6), 6, 20, $cache_time, $option )?></td> 
+					include widget(
+						array(
+							'code'		=> 'x-latest-community-2-'.$latest_count,
+							'name'		=> 'x-latest-community-2',
+							'git'		=> 'https://github.com/x-widget/x-latest-community-2',
+						)
+					);
+				?>
+				</td>
+			<?}?>
 			</tr>
 		</table>
 		<? if ( g::forum_exist($forum_1 = x::board_id ( $domain ).'_1' ) ) { ?>
