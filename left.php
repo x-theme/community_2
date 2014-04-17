@@ -3,6 +3,13 @@
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme()?>/img/company_banner.png' /></a>
 </div>
 <?php
-include 'popular.posts.php';
+//include 'popular.posts.php';
+include widget(
+	array(
+		'code'		=> 'x-community-2-popular-posts',
+		'name'		=> 'x-community-2-popular-posts',
+		'git'		=> 'https://github.com/x-widget/x-community-2-popular-posts',
+	)
+);
 include 'new.posts.php';
 echo visit('x-visit-community-1');
