@@ -22,6 +22,7 @@
 						array(
 							'code'		=> 'x-latest-community-2-'.$latest_count,
 							'name'		=> 'x-latest-community-2',
+							'default_forum_id' => bo_table($latest_count),
 							'git'		=> 'https://github.com/x-widget/x-latest-community-2',
 						)
 					);
@@ -49,6 +50,7 @@
 						array(
 							'code'		=> 'x-latest-community-2-'.$latest_count,
 							'name'		=> 'x-latest-community-2',
+							'default_forum_id' => bo_table($latest_count),
 							'git'		=> 'https://github.com/x-widget/x-latest-community-2',
 						)
 					);
@@ -63,6 +65,7 @@
 						array(
 							'code'		=> 'x-community-2-bottom-latest',
 							'name'		=> 'x-community-2-bottom-latest',
+							'default_forum_id' => bo_table($latest_count),
 							'git'		=> 'https://github.com/x-widget/x-community-2-bottom-latest',
 						)
 					);
