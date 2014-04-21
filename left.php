@@ -11,5 +11,19 @@ include widget(
 		'git'		=> 'https://github.com/x-widget/x-community-2-popular-posts',
 	)
 );
-include 'new.posts.php';
-echo visit('x-visit-community-1');
+//include 'new.posts.php';
+include widget(
+	array(
+		'code'		=> 'x-community-2-new-posts',
+		'name'		=> 'x-community-2-new-posts',
+		'git'		=> 'https://github.com/x-widget/x-community-2-new-posts',
+	)
+);
+//echo visit('x-visit-community-1');
+include widget(
+	array(
+		'code'		=> 'x-community-2-visits',
+		'name'		=> 'x-community-2-visits',
+		'git'		=> 'https://github.com/x-widget/x-community-2-visits',
+	)
+);
