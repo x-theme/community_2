@@ -1,4 +1,13 @@
-<?=outlogin('x-outlogin-community-2')?>
+<?php
+	include widget(
+		array(
+			'code'		=> 'login-community-2',
+			'name'		=> 'login-community-2',
+			'git'		=> 'https://github.com/x-widget/login-community-2',
+		)
+	);
+?>
+
 <div class='company-banner'>
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme()?>/img/company_banner.png' /></a>
 </div>
