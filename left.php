@@ -20,6 +20,7 @@ include widget(
 		'git'		=> 'https://github.com/x-widget/x-community-2-popular-posts',
 	)
 );
+echo "<hr class='left_divider'>";
 //include 'new.posts.php';
 include widget(
 	array(
@@ -28,6 +29,7 @@ include widget(
 		'git'		=> 'https://github.com/x-widget/x-community-2-new-posts',
 	)
 );
+echo "<hr class='left_divider'>";
 //echo visit('x-visit-community-1');
 include widget(
 	array(

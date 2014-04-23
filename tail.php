@@ -7,3 +7,9 @@
 		?>
 	</div></div><!--footer-->
 </div><!--layout-->
+
+<style>
+	hr {
+		display: block;
+	}
+</style>

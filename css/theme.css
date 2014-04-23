@@ -1,11 +1,12 @@
 body{
 	width: 100%;
+
 }
 /* site top */
 .site_top {
 	background-color: #ecf0f1;
 	min-width:970px;
-	font-family: '맑은 고딕', AppleGothic;
+	font-family: dotum;
 	height: 40px;
 	line-height: 40px;
 	
@@ -246,4 +247,10 @@ body{
 .registration-logo {
 	max-width: 330px;
 	max-height: 50px;
+}
+
+.left_divider {
+	border: 0;
+	border-top: solid 1px #cacaca;
+	display: block;
 }
