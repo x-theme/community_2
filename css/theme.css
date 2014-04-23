@@ -118,7 +118,7 @@ body{
 	background-color: transparent;
 	color: #95a5a6;
 	font-size: 1.250em;
-	font-family: '맑은 고딕', AppleGothic;
+	font-family: dotum;
 }
 .logo_search .inner .search-bar .wrapper .s_inner .s_inner_inner input[type='image'] {
 	position: absolute;
@@ -141,7 +141,7 @@ body{
 	display: inline-block;
 	height: 40px;
 	line-height: 39px;
-	font-family: '맑은 고딕', AppleGothic;
+	font-family: dotum;
 	margin-left: 1%;
 	text-align: center;
 	color: #f5f5f5;
@@ -150,6 +150,7 @@ body{
 }
 .main-menu .inner a:hover {
 	text-decoration: none;
+	color: orange;
 }
 
 .layout {
