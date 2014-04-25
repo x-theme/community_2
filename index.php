@@ -3,8 +3,14 @@
 				<td>
 					<?	if(  file_exists(x::path_file('banner')) ) {?>
 						<div class='banner'>
-							<a href="<?=x::meta('banner_url')?>"><img src="<?=x::url_file('banner')?>"></a>
-							<div class='banner_content'><div class='inner'><a href="<?=x::meta('banner_url')?>"><?=strip_tags(string::cutstr(x::meta('banner_content'),100,'...'))?></a></div></div>
+							<? 
+								if ( !$banner_url = x::meta('banner_url') ) {
+									$banner_url = "javascript: void(0)";
+									$target = "";
+								} else $target = "target='_blank'";
+							?>
+							<a href="<?=$banner_url?>" <?=$target?>><img src="<?=x::url_file('banner')?>"></a>
+							<div class='banner_content'><div class='inner'><a href="<?=$banner_url?>" <?=$target?>><?=strip_tags(string::cutstr(x::meta('banner_content'),100,'...'))?></a></div></div>
 						</div>
 					<?}
 						else {?>
@@ -36,9 +42,14 @@
 		</table>
 		<div class='bottom-banner'>
 			<?if( file_exists(x::path_file('banner_bottom')) ) {?>
+				<? 
+					if ( !$banner_url = x::meta('bottom_banner_url') ) {
+						$banner_url = "javascript: void(0)";
+						$target = "";
+					} else $target = "target='_blank'";
+				?>
 				<div class='bottom_banner'>
-					<a href="<?=x::meta('bottom_banner_url')?>"><img src="<?=x::url_file('banner_bottom')?>" /></a>
-					<a href="<?=x::meta('bottom_banner_url')?>" class='banner_url'></a>
+					<a href="<?=$banner_url?>" <?=$target?>><img src="<?=x::url_file('banner_bottom')?>" /></a>
 				</div>
 			<?} else {?>
 					<div class='no-image-banner bottom-no-image-banner'>
