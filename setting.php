@@ -34,7 +34,11 @@
 				<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 760px X 세로 250px]</div>
 			<?}?>
 			<input type='file' name='banner'>
-			<input type='checkbox' name='banner_remove' value='y'><span class='title-small'>이미지 제거</span>
+			<input type='checkbox' name='banner_remove' value='y'><span class='title-small'>이미지 제거</span><br>
+			<div class='title'>배너 내용</div>
+			<textarea name='banner_content' style='width: 95%'><?=stripslashes(x::meta("banner_content"))?></textarea>
+			<div class='title'>배너 링크</div>
+			<input type='text' name='banner_url' value='<?=x::meta("banner_url")?>'>
 			</div>
 		</div>
 
@@ -48,6 +52,8 @@
 				<?}?>
 				<input type='file' name='banner_bottom'>
 				<input type='checkbox' name='banner_bottom_remove' value='y'><span class='title-small'>이미지 제거</span>
+				<div class='title'>BOTTOM 배너 링크</div>
+				<input type='text' name='bottom_banner_url' value='<?=x::meta("bottom_banner_url")?>'>
 			</div>
 		</div>
 		<div style='clear: left'></div>

@@ -2,7 +2,11 @@
 			<tr valign='top'>
 				<td>
 					<?	if(  file_exists(x::path_file('banner')) ) {?>
+						<div class='banner'>
 							<img src="<?=x::url_file('banner')?>">
+							<div class='banner_content'><div class='inner'><?=strip_tags(string::cutstr(x::meta('banner_content'),100,'...'))?></div></div>
+							<a href="<?=x::meta('banner_url')?>" class="banner_url"></a>
+						</div>
 					<?}
 						else {?>
 							<div class='no-image-banner'>
@@ -33,7 +37,10 @@
 		</table>
 		<div class='bottom-banner'>
 			<?if( file_exists(x::path_file('banner_bottom')) ) {?>
-				<img src="<?=x::url_file('banner_bottom')?>" />
+				<div class='bottom_banner'>
+					<img src="<?=x::url_file('banner_bottom')?>" />
+					<a href="<?=x::meta('bottom_banner_url')?>" class='banner_url'></a>
+				</div>
 			<?} else {?>
 					<div class='no-image-banner bottom-no-image-banner'>
 						<img src='<?=x::url_theme()?>/img/no_bottom_banner.png' />
