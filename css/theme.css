@@ -171,15 +171,6 @@ body{
 	position: relative;
 }
 
-.layout .main-content .main-top .banner .banner_url, .layout .main-content .bottom_banner .banner_url {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 99;
-}
-
 .layout .main-content .main-top .banner .banner_content {
 	position: absolute;
 	left: 0;
@@ -189,13 +180,17 @@ body{
 }
 
 .layout .main-content .main-top .banner .banner_content .inner {
-	color: #ffffff;
 	margin: 20px 10px;
 	height: 18px;
 	font-size: 14px;
 	word-break: break-all;
 	line-height: 140%;
 	overflow: hidden;
+}
+
+.layout .main-content .main-top .banner .banner_content .inner a {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .layout .main-content .main-top .banner img {

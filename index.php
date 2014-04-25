@@ -3,9 +3,8 @@
 				<td>
 					<?	if(  file_exists(x::path_file('banner')) ) {?>
 						<div class='banner'>
-							<img src="<?=x::url_file('banner')?>">
-							<div class='banner_content'><div class='inner'><?=strip_tags(string::cutstr(x::meta('banner_content'),100,'...'))?></div></div>
-							<a href="<?=x::meta('banner_url')?>" class="banner_url"></a>
+							<a href="<?=x::meta('banner_url')?>"><img src="<?=x::url_file('banner')?>"></a>
+							<div class='banner_content'><div class='inner'><a href="<?=x::meta('banner_url')?>"><?=strip_tags(string::cutstr(x::meta('banner_content'),100,'...'))?></a></div></div>
 						</div>
 					<?}
 						else {?>
@@ -38,7 +37,7 @@
 		<div class='bottom-banner'>
 			<?if( file_exists(x::path_file('banner_bottom')) ) {?>
 				<div class='bottom_banner'>
-					<img src="<?=x::url_file('banner_bottom')?>" />
+					<a href="<?=x::meta('bottom_banner_url')?>"><img src="<?=x::url_file('banner_bottom')?>" /></a>
 					<a href="<?=x::meta('bottom_banner_url')?>" class='banner_url'></a>
 				</div>
 			<?} else {?>
@@ -78,3 +77,13 @@
 					);
 				?>
 			</div>		
+
+<? if ( etc::old_ie() ) { ?>
+	<style>
+		.layout .main-content .main-top .banner .banner_content {
+			background-color: #000000;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+			filter: alpha(opacity=70);
+		}
+	</style>
+<? } ?>
