@@ -18,7 +18,7 @@
 				if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
 				else {
 			?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 330px X 세로 50px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 82px X 세로 50px]</div>
 				<?}?>
 				<input type='file' name='<?=code_logo()?>'>
 				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
