@@ -249,11 +249,10 @@ body{
 
 .no-image-banner {
 	border: 1px solid #d5d5d5;
-	height: 248px;
 }
 
-.no-image-banner {
-	height: 250px;
+.no-image-banner img {
+	width: 100%;
 }
 
 
